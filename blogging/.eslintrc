@@ -1,0 +1,6 @@
+{
+  "extends": ["@babel/core","@sanity/eslint-config-studio"]
+}
+// {
+//   "extends": ["@babel/core", ...EXISTING-CONFIGS-HERE]
+// }
