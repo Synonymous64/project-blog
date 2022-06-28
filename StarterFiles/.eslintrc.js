@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['wesbos'],
+  extends: ['wesbos','@babel/preset-react'],
   rules: {
     'react/prop-types': 'off',
     'import/no-extraneous-dependencies': 'off',
