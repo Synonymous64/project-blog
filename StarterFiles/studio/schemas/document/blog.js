@@ -30,7 +30,17 @@ export default {
       title : 'Cover Image',
       name : 'coverImage',
       type : 'customImage',
-    }
+    },
+    {
+      title : 'Excerpt',
+      name : 'excerpt',
+      type : 'excerptText',
+    },
+    {
+      title : 'Blog Body',
+      name : 'body',
+      type : 'bodyText',
+    },
   ],
   preview : {
     select : {
@@ -43,7 +53,6 @@ export default {
         title,
         media : image,
         subtitle : publishedAt ? format(new Date(publishedAt),'p, dd/MM/yyyy') : '',
-
       };
     }
   }
