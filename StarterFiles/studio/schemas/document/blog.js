@@ -27,6 +27,23 @@ export default {
       type: "datetime",
     },
     {
+      title : 'Categories',
+      name : 'categories',
+      type : 'array',
+      of :[
+        {
+          type :'reference',
+          to:[{type : 'category'}]
+        },
+      ],
+    },
+    {
+      title : 'Author',
+      name : 'author',
+      type : 'reference',
+      to : [{type : 'author'}]
+    },
+    {
       title : 'Cover Image',
       name : 'coverImage',
       type : 'customImage',

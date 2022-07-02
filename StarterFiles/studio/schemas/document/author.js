@@ -24,6 +24,11 @@ export default {
       name : 'profileImage',
       type : 'customImage',
     },
+    {
+      title : 'Bio',
+      name : 'bio',
+      type : 'bodyText',
+    },
   ],
   preview : {
     select : {
