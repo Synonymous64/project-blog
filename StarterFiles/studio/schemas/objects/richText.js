@@ -1,6 +1,6 @@
 export default {
-  title: "Post Body",
-  name: "bodyText",
+  title: "Rich Text",
+  name: "richText",
   type: "array",
   of: [
     {

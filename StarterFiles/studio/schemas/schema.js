@@ -9,9 +9,9 @@ import categories from "./document/categories";
 import featured from "./document/featured";
 // **Importing custom object
 import customImage from "./objects/customImage";
-import bodyText from "./objects/bodyText";
+import richText from "./objects/richText";
 import customCode from "./objects/customCode";
-import excerptText from "./objects/excerptText";
+import normalText from "./objects/normalText";
 export default createSchema({
   name: "default",
   types: schemaTypes.concat([
@@ -22,8 +22,8 @@ export default createSchema({
     featured,
     //**Objects */
     customImage,
-    bodyText,
+    richText,
     customCode,
-    excerptText,
+    normalText,
   ]),
 });
