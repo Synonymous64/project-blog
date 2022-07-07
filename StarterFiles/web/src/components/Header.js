@@ -6,9 +6,14 @@ import Logo from "./Logo";
 import { MdSearch, MdMenu, MdClose } from "react-icons/md";
 import { menu } from "../constants/menu";
 import { Link } from "gatsby";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { SearchModalContext } from "../context/searchModalContext";
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { openSearchModal } = useContext(SearchModalContext);
+  const handleSearchModalOpen = () => {
+    openSearchModal();
+  };
   const handleNavItemClick = () => {
     if (isNavOpen) setIsNavOpen(false);
   };
@@ -22,7 +27,13 @@ function Header() {
           <div className={clsx("nav__wrapper", isNavOpen && "open")}>
             <div className="mobileIcon">
               <div className="searchIcon">
-                <div className="searchIcon__wrapper">
+                <div
+                  className="searchIcon__wrapper"
+                  onClick={handleSearchModalOpen}
+                  onKeyDown={handleSearchModalOpen}
+                  role="button"
+                  tabIndex={0}
+                >
                   <MdSearch />
                 </div>
               </div>
@@ -36,7 +47,7 @@ function Header() {
             </div>
             {isNavOpen && (
               <div
-              className="mobileNavBg"
+                className="mobileNavBg"
                 aria-label="close menu"
                 role="button"
                 tabIndex={0}
@@ -61,7 +72,13 @@ function Header() {
                   </li>
                 ))}
                 <li className="searchIcon">
-                  <div className="searchIcon__wrapper">
+                  <div
+                    className="searchIcon__wrapper"
+                    onClick={handleSearchModalOpen}
+                    onKeyDown={handleSearchModalOpen}
+                    role="button"
+                    tabIndex={0}
+                  >
                     <MdSearch />
                   </div>
                 </li>

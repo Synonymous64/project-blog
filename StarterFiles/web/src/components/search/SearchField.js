@@ -1,0 +1,17 @@
+import React from "react";
+import { SearchFieldStyles } from "../../styles/search/SearchFieldStyles";
+function SearchField({ value, setValue, onFocus }) {
+  return (
+    <SearchFieldStyles>
+      <input
+        type="text"
+        placeholder="search"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        onFocus={onfocus && onfocus}
+      />
+    </SearchFieldStyles>
+  );
+}
+
+export default SearchField;
