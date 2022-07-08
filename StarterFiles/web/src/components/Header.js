@@ -84,8 +84,8 @@ function Header() {
                 </li>
               </ul>
             </nav>
-          </div>
         </div>
+          </div>
       </div>
     </HeaderStyles>
   );

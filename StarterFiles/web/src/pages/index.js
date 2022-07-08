@@ -1,4 +1,13 @@
-import React from 'react';
+import React from "react";
+import HeroSection from "../components/homepage/HeroSection";
+import SEO from "../components/SEO";
+const IndexPage = () => (
+  <>
+  <SEO>
 
-const IndexPage = () => null;
+  </SEO>
+    <HeroSection />
+  </>
+);
+
 export default IndexPage;

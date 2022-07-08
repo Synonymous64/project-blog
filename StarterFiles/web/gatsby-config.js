@@ -1,10 +1,15 @@
-require('dotenv').config('./.env');
+require("dotenv").config("./.env");
 
 module.exports = {
   siteMetadata: {
-    title: `TechHub-blog`,
+    title: `Praj-Blogs`,
     siteUrl: `https://techhub-blog.netlify.com`,
-    description: `TechHub Blog is a platform for latest technology news and updates.`,
+    description: `Praj-Blogs is a platform made for latest news and tech-related informations`,
   },
-  plugins: [],
+  plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+  ],
 };
