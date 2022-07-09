@@ -3,7 +3,7 @@ import HeroSection from "../components/homepage/HeroSection";
 import SEO from "../components/SEO";
 const IndexPage = () => (
   <>
-  <SEO>
+  <SEO title="Homepage">
 
   </SEO>
     <HeroSection />
