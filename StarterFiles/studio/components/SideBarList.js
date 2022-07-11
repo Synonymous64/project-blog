@@ -6,9 +6,9 @@ function SideBarList() {
     .items([
       S.listItem()
         .title("Featured")
-        .id("featuredItem")
+        .id("featuredItems")
         .icon(mdStar)
-        .child(S.editor().schemaType("featured").documentId("featuredItem")),
+        .child(S.editor().schemaType("featured").documentId("featuredItems")),
         ...S.documentTypeListItems().filter(
             (item) =>item.getId() !== 'featured'
         )
