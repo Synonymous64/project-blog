@@ -35,7 +35,7 @@ function FeaturedBlogs() {
     }
   `);
   const FeaturedBlogs = data.allSanityFeatured.nodes[0].blogs;
-  console.log(FeaturedBlogs);
+  // console.log(FeaturedBlogs);
   return (
     <FeaturedBlogsStyles> 
     <SectionTitle>Featured Blogs</SectionTitle>

@@ -26,7 +26,7 @@ export default {
       ],
     },
     {
-        name: "categories",
+        name: "category",
         title: "Featured Top Categories",
         type: "array",
         of: [
