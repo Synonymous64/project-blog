@@ -22,7 +22,7 @@ function TopCategories() {
     }
   `);
   const categories = data.allSanityFeatured.nodes[0].category;
-  console.log(categories);
+  // console.log(categories);
   return (
     <TopCategoriesStyles>
       <SectionTitle>Top Categories</SectionTitle>

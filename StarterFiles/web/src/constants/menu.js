@@ -4,7 +4,7 @@ export const menu = [
     path: "/",
   },
   {
-    title: "Blog",
+    title: "Blogs",
     path: "/blogs",
   },
   {
@@ -12,7 +12,7 @@ export const menu = [
     path: "/categories",
   },
   {
-    title: "Author",
+    title: "Authors",
     path: "/author",
   },
 ];

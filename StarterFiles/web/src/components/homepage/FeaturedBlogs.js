@@ -3,7 +3,7 @@ import {FeaturedBlogsStyles} from '../../styles/homePage/FeaturedBlogsStyles'
 import { SectionTitle } from "../TypoGraphy/Title";
 import ParagraphText from "../TypoGraphy/ParagraphText";
 import React from "react";
-import BlogGrid from "../blogs/BlogGrid";
+import BlogGrid from "../blog/BlogGrid";
 
 function FeaturedBlogs() {
   const data = useStaticQuery(graphql`
