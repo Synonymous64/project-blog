@@ -5,7 +5,7 @@ import PageSpace from "../components/PageSpace";
 import SEO from "../components/SEO";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { Title } from "../components/TypoGraphy/Title";
-import BlogGrid from '../components/blog/BlogGrid'
+import BlogGrid from "../components/blog/BlogGrid";
 import MyPortableText from "../components/TypoGraphy/MyPortableText";
 export const authorQuery = graphql`
   query SingleAuthorQuery($id: String!) {
@@ -60,13 +60,11 @@ function SingleAuthor({ data }) {
             />
             <Title className="name">{author.name}</Title>
             <div className="bio">
-                <MyPortableText 
-                value={author._rawBio}
-                ></MyPortableText>
+              <MyPortableText value={author._rawBio}></MyPortableText>
             </div>
           </div>
-            <hr className="hr" />
-            <BlogGrid blogs={blogs}></BlogGrid>
+          <hr className="hr" />
+          <BlogGrid blogs={blogs}></BlogGrid>
         </SingleAuthorStyles>
       </div>
     </PageSpace>
