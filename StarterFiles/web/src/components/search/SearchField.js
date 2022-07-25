@@ -8,7 +8,7 @@ function SearchField({ value, setValue, onFocus }) {
         placeholder="search"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-        onFocus={onfocus && onfocus}
+        onFocus={onFocus && onFocus}
       />
     </SearchFieldStyles>
   );
