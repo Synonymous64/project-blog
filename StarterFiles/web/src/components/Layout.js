@@ -9,8 +9,8 @@ function Layout({ children }) {
     <SearchModalContextProvider>
       <GlobalStyles />
       <Search/>
-      {children}
       <Header/>
+      <main>{children}</main>
       <Footer/>
     </SearchModalContextProvider>
   );
