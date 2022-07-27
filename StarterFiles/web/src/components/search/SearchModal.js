@@ -1,4 +1,4 @@
-	import axios from 'axios';
+import axios from 'axios';
 import { graphql, useStaticQuery } from 'gatsby';
 import React, { useContext, useEffect, useState } from 'react';
 import { MdClose } from 'react-icons/md';
@@ -30,10 +30,10 @@ function Search() {
   const { isSearchModalOpen } = useContext(SearchModalContext);
   const [searchQuery, setSearchQuery] = useState('');
   const { closeSearchModal } = useContext(SearchModalContext);
+  const data = useStaticQuery(query);
   const [blogsIndexStore, setBlogsIndexStore] = useState(null);
   const [categoriesIndexStore, setCategoriesIndexStore] = useState(null);
   const [authorsIndexStore, setAuthorsIndexStore] = useState(null);
-  const data = useStaticQuery(query);
 
   useEffect(() => {
     if (isSearchModalOpen) {
@@ -67,12 +67,12 @@ function Search() {
       { data: authorsIndex },
       { data: authorsStore },
     ] = await Promise.all([
-      axios.get(`${blogsPublicIndexURL}`),
-      axios.get(`${blogsPublicStoreURL}`),
-      axios.get(`${categoriesPublicIndexURL}`),
-      axios.get(`${categoriesPublicStoreURL}`),
-      axios.get(`${authorsPublicIndexURL}`),
-      axios.get(`${authorsPublicStoreURL}`),
+      axios.get(blogsPublicIndexURL),
+      axios.get(blogsPublicStoreURL),
+      axios.get(categoriesPublicIndexURL),
+      axios.get(categoriesPublicStoreURL),
+      axios.get(authorsPublicIndexURL),
+      axios.get(authorsPublicStoreURL),
     ]);
     setBlogsIndexStore({
       index: blogsIndex,

@@ -126,7 +126,7 @@ module.exports = {
         normalizer: ({ data }) =>
           data.allSanityAuthor.nodes.map((node) => ({
             id: node.id,
-            title: node.name,
+            name: node.name,
             slug: node.slug,
             profileImage: node.profileImage,
           })),

@@ -4,16 +4,23 @@ import { SearchResultItemStyles } from "../../styles/search/SearchResultItemStyl
 import { Title } from "../TypoGraphy/Title";
 import ParagraphText from "../TypoGraphy/ParagraphText";
 import { format } from "date-fns";
+import { SearchModalContext } from "../../context/searchModalContext";
+import { useContext } from "react";
 function BlogsSearchResultItem({ blog }) {
+  const { closeSearchModal } = useContext(SearchModalContext);
   return (
-    <SearchResultItemStyles>
+    <SearchResultItemStyles
+      to={`/blogs/${blog.slug.current}`}
+      onClick={closeSearchModal}
+    >
       <GatsbyImage
         image={blog.coverImage.asset.gatsbyImageData}
+        alt={blog.coverImage.alt}
         className="img"
       />
       <div>
         <Title className="title">{blog.title}</Title>
-        <ParagraphText className="categoriesText">
+        <ParagraphText className="publishedAtText">
           {format(new Date(blog.publishedAt), "p, MMMM dd, yyyy")}
         </ParagraphText>
       </div>
@@ -22,10 +29,35 @@ function BlogsSearchResultItem({ blog }) {
 }
 
 function CategoriesSearchResultItem({ category }) {
-    return (
-        <SearchResultItemStyles>
-            <Title>{category.title}</Title>
-        </SearchResultItemStyles>
-    )
+  const { closeSearchModal } = useContext(SearchModalContext);
+  return (
+    <SearchResultItemStyles
+      to={`/categories/${category.slug.current}`}
+      onClick={closeSearchModal}
+    >
+      <Title className="title">{category.title}</Title>
+    </SearchResultItemStyles>
+  );
 }
-export { BlogsSearchResultItem, CategoriesSearchResultItem };
+function AuthorsSearchResultItem({ author }) {
+  const { closeSearchModal } = useContext(SearchModalContext);
+  return (
+    <SearchResultItemStyles
+      to={`/authors/${author.slug.current}`}
+      onClick={closeSearchModal}
+    >
+      <GatsbyImage
+        image={author.profileImage.asset.gatsbyImageData}
+        alt=""
+        className="authorProfileImage"
+      />
+      <Title className="title">{author.title}</Title>
+    </SearchResultItemStyles>
+  );
+}
+
+export {
+  BlogsSearchResultItem,
+  CategoriesSearchResultItem,
+  AuthorsSearchResultItem,
+};

@@ -3,6 +3,7 @@ import { useFlexSearch } from "react-use-flexsearch";
 import ParagraphText from "../TypoGraphy/ParagraphText";
 import { BlogsSearchResultItem} from "./SearchResultItem";
 import { CategoriesSearchResultItem } from "./SearchResultItem";
+import { AuthorsSearchResultItem } from "./SearchResultItem";
 function SearchResult({
   searchQuery,
   blogsIndexStore,
@@ -10,6 +11,7 @@ function SearchResult({
   authorsIndexStore,
 }) {
   // console.log({blogsIndexStore, categoriesIndexStore, authorsIndexStore});
+  // console.log({authorsIndexStore});
   const blogsResult = useFlexSearch(
     searchQuery,
     JSON.stringify(blogsIndexStore.index),
@@ -48,6 +50,14 @@ function SearchResult({
           <ParagraphText>Categories</ParagraphText>
           {categoriesResult.map((result) => (
             <CategoriesSearchResultItem key={result.id} category={result}/>
+          ))}
+        </>
+      )}
+      {authorsResult.length > 0 && (
+        <>
+          <ParagraphText>Authors</ParagraphText>
+          {authorsResult.map((result) => (
+            <AuthorsSearchResultItem key={result.id} author={result}/>
           ))}
         </>
       )}

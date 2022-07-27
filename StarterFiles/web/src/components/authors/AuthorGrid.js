@@ -4,11 +4,12 @@ import AuthorItem from "./AuthorItem";
 function AuthorGrid({ authors }) {
   return (
     <AuthorGridStyles>
-      {authors.map((author) => (
+      {authors.map((item) => (
         <AuthorItem
-          name={author.name}
-          profileImage={author.profileImage}
-          slug={author.slug}
+          name={item.name}
+          profileImage={item.profileImage}
+          key={item.id}
+          slug={item.slug}
         ></AuthorItem>
       ))}
     </AuthorGridStyles>
