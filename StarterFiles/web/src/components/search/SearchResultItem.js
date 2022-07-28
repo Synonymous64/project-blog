@@ -48,10 +48,10 @@ function AuthorsSearchResultItem({ author }) {
     >
       <GatsbyImage
         image={author.profileImage.asset.gatsbyImageData}
-        alt=""
-        className="authorProfileImage"
+        alt={author.profileImage.alt}
+        className="authorProfileImg"
       />
-      <Title className="title">{author.title}</Title>
+      <Title className="title">{author.name}</Title>
     </SearchResultItemStyles>
   );
 }

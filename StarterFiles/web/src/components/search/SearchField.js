@@ -1,5 +1,6 @@
 import React from "react";
 import { SearchFieldStyles } from "../../styles/search/SearchFieldStyles";
+import {FiSearch} from 'react-icons/fi'
 function SearchField({ value, setValue, onFocus }) {
   return (
     <SearchFieldStyles>
@@ -10,6 +11,7 @@ function SearchField({ value, setValue, onFocus }) {
         onChange={(e) => setValue(e.target.value)}
         onFocus={onFocus && onFocus}
       />
+      <FiSearch className="searchIcon"/>
     </SearchFieldStyles>
   );
 }

@@ -9,6 +9,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import SEO from "../components/SEO";
 import { graphql } from "gatsby";
 import { Link } from "gatsby";
+import Comments from "../components/Comments";
 import {Title} from '../components/TypoGraphy/Title'
 import { SingleBlogStyles } from "../styles/blog/SingleBlogStyles";
 export const postQuery = graphql`
@@ -77,6 +78,7 @@ function singleBlog({ data }) {
       </div>
     </div>
       </PageSpace>
+    <Comments issueTerm={blog.title}/>
     </SingleBlogStyles>
   );
 }

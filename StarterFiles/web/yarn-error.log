@@ -31,7 +31,7 @@ npm manifest:
     "name": "tech-hub",
     "version": "1.0.0",
     "private": true,
-    "description": "techHub",
+    "description": "prajBlog",
     "author": "shaif arfan",
     "keywords": [
       "gatsby"
