@@ -47,7 +47,7 @@ function BlogList({ data, pageContext }) {
         <div className="container">
           <PageHeader
             title="Our Blog Posts"
-            description="This month will bring about the 88th Academy Awards, Starting in 1928, this prestigious award ceremony"
+            description="All the blogs are presented to this page, Happy Reading!"
           />
           <BlogGrid blogs={blogs} />
           {numberOfPages > 1 && (

@@ -15,8 +15,7 @@ function HeroSection() {
               Explore the world of technological advancements
             </h1>
             <ParagraphText className="hero__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              consequuntur sit quis.
+            Praj-Blogs is a platform which keeps you updated with latest news and tech-related information.
             </ParagraphText>
             <Button to="/blogs" tag={Link} className="hero__button">
               Explore Blogs

@@ -11,7 +11,7 @@ function Footer() {
       <div className="container">
         <Logo/>
         <ParagraphText className="footer__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio alias error accusamus quae perspiciatis nam laborum cum consectetur voluptate, nesciunt repudiandae suscipit at quasi numquam sequi dolorem quis voluptatum possimus?
+        Prajwal Urkude is a IT-Student from India. More importantly, He is currently struggling to establish himself as a good programmer, meaning that he has a lot of geeky stuff that he likes to share.
         </ParagraphText>
         <ul className='footer__menuList'>
         {menu.map(item=>(

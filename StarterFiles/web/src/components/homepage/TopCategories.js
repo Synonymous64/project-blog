@@ -22,13 +22,13 @@ function TopCategories() {
     }
   `);
   const categories = data.allSanityFeatured.nodes[0].category;
-  // console.log(categories);
+  console.log(categories);
   return (
     <TopCategoriesStyles>
       <SectionTitle>Top Categories</SectionTitle>
       <ParagraphText className="info">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis
-        voluptate maxime et!
+        Our tags and Categories to which our blogs are catagorized!
+        Hope you enjoy :)
       </ParagraphText>
       <CategoryGrid 
       categories={categories}
