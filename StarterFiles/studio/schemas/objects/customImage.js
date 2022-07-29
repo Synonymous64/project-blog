@@ -1,9 +1,8 @@
-import { MdImage } from "react-icons/md";
+
 export default {
   name: "customImage",
   title: "Image",
   type: "image",
-  icon: MdImage,
   options: {
     hotspot: true,
   },
