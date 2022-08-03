@@ -7,13 +7,13 @@ export const PaginationStyles = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
     a {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       background: var(--gray);
       padding: 0.8rem;
       border-radius: 4px;
